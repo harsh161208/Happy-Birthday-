@@ -3,54 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Madam ji!</title>
+    <title>Janamdin Mubarak, Madam ji!</title>
+    <!-- Google Fonts for stylish typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #0f0f12;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 50px 20px;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
-        .card {
-            background: linear-gradient(145deg, #1e1e24, #121216);
-            padding: 35px 25px;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(255, 64, 129, 0.25);
-            max-width: 450px;
-            margin: 0 auto;
-            border: 1px solid rgba(255, 64, 129, 0.2);
+        body {
+            /* Warm, deep pink to soft red gradient */
+            background: linear-gradient(-45deg, #1A1A1D, #950740, #C3073F, #1A1A1D);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden; /* Hide floating items overflow */
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.08); /* Frosted glass effect */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 50px 30px;
+            border-radius: 30px;
+            box-shadow: 0 8px 32px rgba(255, 64, 129, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 90%;
+            width: 450px;
+            z-index: 10;
+        }
+        .header-section {
+            margin-bottom: 25px;
         }
         h1 {
-            color: #ff4081;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
+            /* Elegant cursive font for the main title */
+            font-family: 'Great Vibes', cursive;
+            color: #FFB3DE; /* Soft Pink */
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 8px rgba(255, 179, 222, 0.6);
         }
-        .subtitle {
-            font-size: 1.5rem;
-            color: #ff80ab;
-            font-weight: bold;
-            margin-top: 0;
+        .madam-ji {
+            font-size: 1.8rem;
+            color: #FFDEE9; /* Very light pink */
+            font-weight: 600;
+            display: block;
+            margin-top: -10px;
         }
-        p {
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #FF4081, transparent);
+            margin: 20px auto;
+            width: 60%;
+        }
+        .message-section p {
             font-size: 1.1rem;
-            line-height: 1.7;
-            color: #e0e0e0;
+            line-height: 1.8;
+            font-weight: 300;
+            color: #F8F9FA;
+            margin-bottom: 15px;
+            font-style: italic;
         }
         .emoji {
-            font-size: 2.5rem;
-            margin: 15px 0;
+            font-size: 3rem;
+            margin: 20px 0;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        /* Small balloons floating in background */
+        .balloon {
+            position: absolute;
+            background: rgba(255, 64, 129, 0.6);
+            width: 20px;
+            height: 26px;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            animation: float 10s infinite ease-out;
+            bottom: -50px;
+            z-index: 1;
+        }
+        .balloon::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 30px;
+            background: rgba(255,255,255,0.3);
+            left: 10px;
+            bottom: -30px;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-120vh) rotate(20deg); opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="emoji">🎉✨</div>
-        <h1>Happy Birthday</h1>
-        <div class="subtitle">Madam ji! 🎂</div>
-        <p>Aapko janmdin ki bahut bahut badhaiyan!</p>
-        <p>Ye saal aapke liye dher sari khushiyan, safalta aur aachi health lekar aaye. Hamesha aise hi muskurate rahiye! 🌟</p>
+    <!-- Floating balloons setup (10 basic items) -->
+    <div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="balloon" style="left: 20%; animation-delay: 2s; width: 25px; height: 32px;"></div>
+    <div class="balloon" style="left: 35%; animation-delay: 1s;"></div>
+    <div class="balloon" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="balloon" style="left: 65%; animation-delay: 0.5s; width: 18px; height: 24px;"></div>
+    <div class="balloon" style="left: 80%; animation-delay: 3s;"></div>
+    <div class="balloon" style="left: 90%; animation-delay: 5s;"></div>
+    <div class="balloon" style="left: 5%; animation-delay: 7s;"></div>
+    <div class="balloon" style="left: 25%; animation-delay: 6s; width: 30px; height: 38px;"></div>
+    <div class="balloon" style="left: 70%; animation-delay: 8s;"></div>
+
+    <div class="container">
+        <div class="header-section">
+            <span class="emoji">🎁</span>
+            <h1>Happy Birthday</h1>
+            <span class="madam-ji">Madam ji! 🎂</span>
+            <div class="divider"></div>
+        </div>
+        <div class="message-section">
+            <p>Aapko Janamdin ki bahut bahut badhaiyan!</p>
+            <p>Khuda kare aapke iss khas din par har khushi aapke kadam chume.</p>
+            <p>Naye saal mein aapki har dua qubool ho aur aap hamesha aise hi muskurati rahein. 🌟</p>
+        </div>
+        <div class="emoji" style="font-size: 2rem;">🥂💫</div>
     </div>
 </body>
 </html>
